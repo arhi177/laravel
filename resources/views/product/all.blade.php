@@ -7,13 +7,10 @@
     <div class="input-field col s12">
       <meta name="csrf-token" content="{{ csrf_token() }}">
       <input autocomplete="off" name="name" id="name" type="text" class="validate">
-      <!-- <script src="{{url ('/js/search.js')}}"></script> -->
       <label class="active" for="name">Поиск</label>
     </div>
   </div>
 
-<script>
-</script>
 
 <table>
         <thead>
@@ -26,14 +23,14 @@
           </tr>
         </thead>
 
-        <tbody>
+        <tbody id="products">
         @foreach($products as $product)
           <tr>
             <td>{{$product->id}}</td>
             <td>{{$product->name}}</td>
             <td>{{$product->weight}}</td>
             <td>{{$product->price}}</td>
-            <td><a class="waves-effect waves-light btn red" href="{{url('/product/delete/' . $product->id)}}">Это ьблять</a></td>
+            <td><a class="waves-effect waves-light btn red" href="{{url('/product/delete/' . $product->id)}}">Это ьблять Удаление</a></td>
           </tr>
         @endforeach 
         </tbody>
