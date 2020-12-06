@@ -10,7 +10,7 @@ $(document).ready(function(){
                 let products = JSON.parse(returnedData);
                 $('#products').html(''); //это правильно
                 let html = '';
-                products.forEach(product => {
+                products.forEach(product => { 
                     html += `<tr>`;
                     html += `<td>${product['id']}`;
                     html += `<td>${product['name']}`;
